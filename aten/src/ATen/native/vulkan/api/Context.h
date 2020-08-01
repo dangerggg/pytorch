@@ -10,11 +10,11 @@ namespace api {
 class Context final {
  public:
   explicit Context(bool enable_validation_layers);
-  ~Context() = default;
   Context(const Context&) = delete;
   Context& operator=(const Context&) = delete;
   Context(Context&&) = default;
   Context& operator=(Context&&) = default;
+  ~Context() = default;
 
   inline VkInstance instance() const {
     return instance_.get();
